@@ -26,7 +26,8 @@ export enum Theater {
   AFRICA = 'AFRICA',
   PACIFIC = 'PACIFIC',
   CARIBBEAN = 'CARIBBEAN',
-  SOUTH_CENTRAL_AMERICA = 'SOUTH & CENTRAL AMERICA'
+  SOUTH_CENTRAL_AMERICA = 'SOUTH & CENTRAL AMERICA',
+  IRAN = 'IRAN'
 }
 
 export interface GeoPoint {
@@ -50,6 +51,7 @@ export interface StrategicAsset {
   lastUpdated: string;
   trackingUrl?: string;
   wikiUrl?: string;
+  pathHistory?: GeoPoint[];
 }
 
 export interface TheaterPOI {

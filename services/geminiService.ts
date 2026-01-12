@@ -11,7 +11,9 @@ export const fetchSituationalReport = async (theater: Theater = Theater.GLOBAL):
   const ai = new GoogleGenAI({ apiKey });
   
   const theaterContext = theater === Theater.GLOBAL 
-    ? "globally across all major conflict zones (Ukraine, Middle East, Africa, Pacific)" 
+    ? "globally across all major conflict zones (Ukraine, Middle East, Africa, Pacific, Iran)" 
+    : theater === Theater.IRAN
+    ? "specifically for the Iranian theater, focusing on internal civil unrest, revolutionary activity, and air/naval movements in and out of the country"
     : `specifically for the ${theater} theater of operations`;
 
   const prompt = `Provide a comprehensive current strategic situational report and LIVE news feed ${theaterContext}. 
@@ -21,8 +23,9 @@ export const fetchSituationalReport = async (theater: Theater = Theater.GLOBAL):
 
   Focus on:
   - Tactical frontline shifts
-  - Significant naval movements
+  - Significant naval movements (NATO/BRICS/IRAN)
   - Pentagon Activity Rating based on surrounding traffic/busyness signals.
+  - For Iran: Monitor internal stability, IRGC movements, and civilian flight patterns.
 
   Format the response as a valid JSON object with the following structure:
   {
