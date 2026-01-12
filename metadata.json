@@ -1,0 +1,7 @@
+{
+  "name": "The Boys Situation Monitorer",
+  "description": "A high-fidelity interactive dashboard for monitoring NATO flight and naval movements globally, featuring real-time situational reports powered by Gemini and Google Search grounding.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

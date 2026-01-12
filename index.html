@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSC // Global Strategic Command</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Orbitron:wght@400;500;700;900&display=swap');
+        
+        :root {
+            --dx-amber: #d97706;
+            --dx-gold: #fbbf24;
+            --dx-bg: #000000;
+            --dx-slate: #0a0a0c;
+            --dx-blue: #3b82f6;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--dx-bg);
+            color: #f8fafc;
+            margin: 0;
+            overflow: hidden;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(217, 119, 6, 0.05) 0%, transparent 80%),
+                linear-gradient(rgba(10, 10, 12, 0.8) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(10, 10, 12, 0.8) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
+        }
+
+        .font-hud {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 2px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--dx-amber);
+            border-radius: 0;
+        }
+
+        .radar-sweep {
+            background: conic-gradient(from 0deg, rgba(217, 119, 6, 0.1) 0deg, rgba(217, 119, 6, 0) 60deg);
+            animation: rotate 6s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .tri-corner-tl {
+            clip-path: polygon(0 0, 100% 0, 100% 10%, 10% 10%, 10% 100%, 0 100%);
+        }
+
+        .amber-glow {
+            text-shadow: 0 0 10px rgba(217, 119, 6, 0.6);
+        }
+
+        .dx-border {
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            background: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(10px);
+        }
+
+        .dx-border:hover {
+            border-color: rgba(217, 119, 6, 0.6);
+        }
+
+        .dx-button {
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "d3": "https://esm.sh/d3@^7.9.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
